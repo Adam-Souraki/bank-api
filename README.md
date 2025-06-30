@@ -31,6 +31,10 @@ Exchange rates from [ExchangeRate-API](https://www.exchangerate-api.com/docs/ove
 - Base API URL and API key configurable in application.yaml
 - Supports pair and history endpoints
 
+**Note**</br> 
+The free plan of ExchangeRate-API does not support the /history endpoint.</br>
+Our /api/v1/exchange/dkk-to-usd/historical-and-today currently returns only today’s rate due to this limitation. Historical rates require upgrading API plan.
+
 ## API Endpoints
 
 ### Accounts
