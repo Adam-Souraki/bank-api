@@ -1,0 +1,5 @@
+exchange:
+  api:
+    url: http://localhost:9999
+    key: dummy-key
+

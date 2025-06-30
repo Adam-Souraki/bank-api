@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  security:
+    user:
+      name: admin
+      password: admin
+      roles: ADMIN
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+exchange:
+  api:
+    url: https://v6.exchangerate-api.com/v6
+    key: "7eabef9b4fa7afea71ec4f00"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus

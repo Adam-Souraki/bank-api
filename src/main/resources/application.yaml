@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: bank-api
+
+  profiles:
+    active: dev
+
+  security:
+    user:
+      name: ${USER_NAME}
+      password: ${USER_PASSWORD}
+      roles: ${USER_ROLES}
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+
+logging:
+  level:
+    root: INFO
+
+exchange:
+  api:
+    url: ${API_URL}
+    key: ${API_KEY}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
